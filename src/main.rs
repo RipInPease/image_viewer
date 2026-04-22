@@ -2,7 +2,7 @@ use std::env::args;
 use std::io::{Read};
 use std::fs::{self, File};
 
-mod bmp;
+use image_viewer::bmp;
 
 fn main()  {
     let mut args = args();
@@ -26,7 +26,7 @@ fn main()  {
     let file_type = &file_path[file_path.len()-1 - i..];
     
     match file_type {
-        "bmp" => (),
+        "bmp" => bmp::view_bmp(file_path),
         _     => {println!("Unknown file type"); return}
     }
 }
