@@ -76,6 +76,7 @@ struct BmpInfoHeader {
 
 
 impl BmpInfoHeader {
+    /// Assumes you are at the start of the header
     fn read_from_here<R: Read>(file: &mut R) -> Option<Self> {
         let mut bfr = [0; 40];
 
@@ -105,4 +106,9 @@ impl BmpInfoHeader {
 
         Some(header)
     }
+}
+
+
+fn image_view_no_comp<R: Read>(file: &mut R, header: &BmpInfoHeader) {
+    
 }
