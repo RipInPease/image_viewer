@@ -1,0 +1,4 @@
+[package]
+name = "image_viewer"
+
+[dependencies]
