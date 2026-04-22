@@ -2,3 +2,4 @@
 name = "image_viewer"
 
 [dependencies]
+raylib = "5.5.1"
